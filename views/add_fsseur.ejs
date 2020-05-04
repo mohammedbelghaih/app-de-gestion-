@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Add</title>
+    
+</head>
+<body>
+    <%- include("./navbar/nav.ejs") %>
+    <form method="POST" class="needs-validation frm" novalidate>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip01">Id</label>
+            <input type="number" name="id" class="form-control" id="validationTooltip01" placeholder="Id du fournisseur" value="Mark" required>
+            <div class="valid-tooltip">
+              
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip02">Nom</label>
+            <input type="text" name="name" class="form-control" id="validationTooltip02" placeholder="Nom du fournisseur" required>
+            <div class="valid-tooltip">
+              
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltipUsername">Numero de telephone</label>
+            <div class="input-group">
+              
+              <input type="number" name="tel" class="form-control" id="validationTooltipUsername" placeholder="Numero de telephone" aria-describedby="validationTooltipUsernamePrepend" required>
+              <div class="invalid-tooltip">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationTooltip03">Email</label>
+            <input type="email" name="email" class="form-control" id="validationTooltip03" placeholder="Email du fournisseur" required>
+            <div class="invalid-tooltip">
+              
+            </div>
+          </div>
+        </div>
+        
+        <input class="btn btn-primary " type="submit" value="Ajouter" style="background-color: #2487a5 !important;">
+      </form>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Add</title>
+</head>
+<body>
+    <!-- <form method="post" action="/add_pdt">
+        
+        <input type="number" name="id">
+        <input type="text" name="name">
+        <input type="number" name="quantity">
+        <input type="number" name="price">
+        
+        <select name="rayonId" id="">
+            <% for(let i=0; i<table.length; i++){%>
+            <option value="<%= table[i].rayon_id %>"><%= table[i].rayon_name %></option>
+            <%}%>
+        </select>
+        <select name="fsseurId" id="">
+            <% for(let i=0; i<fsseur.length; i++){%>
+            <option value="<%= fsseur[i].id %>"><%= fsseur[i].name %></option>
+            <%}%>
+        </select>
+        <input type="submit" value="Add">
+        
+    </form> -->
+
+
+
+    <%- include("./navbar/nav.ejs") %>
+    <form method="POST" class="needs-validation frm" novalidate>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip01">Id</label>
+            <input type="number" name="id" class="form-control" id="validationTooltip01" placeholder="Id du produit"  required>
+            <div class="valid-tooltip">
+              
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip02">Nom du prduit</label>
+            <input type="text" name="name" class="form-control" id="validationTooltip02" placeholder="Nom du produit" required>
+            <div class="valid-tooltip">
+              
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltipUsername">Quantité</label>
+            <div class="input-group">
+              <!-- <div class="input-group-prepend">
+                <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+              </div> -->
+              <input type="number" name="quantity" class="form-control" id="validationTooltipUsername" placeholder="Quantité du produit" aria-describedby="validationTooltipUsernamePrepend" required>
+              <div class="invalid-tooltip">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationTooltip03">Prix unitaire</label>
+            <input type="number" name="price" class="form-control" id="validationTooltip03" placeholder="Prix unitaire" required>
+            <div class="invalid-tooltip">
+              
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationTooltip03">Choisir un rayon</label>
+                <select name="rayonId" id="" class="form-control form-control-lg">
+                    <% for(let i=0; i<table.length; i++){%>
+                    <option value="<%= table[i].rayon_id %>"><%= table[i].rayon_name %></option>
+                    <%}%>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationTooltip03">Choisir un fournisseur</label>
+                <select name="fsseurId" id="" class="form-control form-control-lg">
+                    <% for(let i=0; i<fsseur.length; i++){%>
+                    <option value="<%= fsseur[i].id %>"><%= fsseur[i].name %></option>
+                    <%}%>
+                </select>
+            </div>
+        </div>
+        
+        <input class="btn btn-primary" type="submit" value="Ajouter" style="background-color: #2487a5 !important;">
+      </form>
+    
+</body>
+</html>

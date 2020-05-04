@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>details</title>
+</head>
+<body>
+    <%- include("./navbar/nav.ejs") %>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id rayon</th>
+                    <th scope="col">Rayon</th>
+                    <th scope="col">Id produit</th>
+                    <th scope="col">Produit</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Fournisseur</th>
+                    <th scope="col">Tel du fournisseur</th>
+                    <th scope="col">Email du fournisseur</th>
+                </tr>
+            </thead>
+                
+                    <tbody>
+                        <% table.forEach((i)=>{ %>
+                        <tr>
+                            <th scope="row"><%= i.rayon_id %></th>
+                            <td><%= i.rayon_name %></td>
+                            <td><%= i.products_id %></td>
+                            <td><%= i.product_name %></td>
+                            <td><%= i.quantity %></td>
+                            <td><%= i.unit_price %></td>
+                            <td><%= i.name %></td>
+                            <td><%= i.tel %></td>
+                            <td><%= i.email %></td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+        </table>
+</body>
+</html>

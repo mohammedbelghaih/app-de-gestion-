@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Produit</title>
+</head>
+<body>
+    <%- include("./navbar/nav.ejs") %>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id rayon</th>
+                <th scope="col">Id produit</th>
+                <th scope="col">produit</th>
+                <th scope="col">quantité</th>
+                <th scope="col">prix</th>
+                <th scope="col">Id fournisseur</th>
+                <th scope="col" style="width: 10%;">Modifier</th>
+                <th scope="col" style="width: 10%;">Supprimer</th>
+                <tbody>
+                    <% table.forEach((i)=>{ %>
+                    <tr>
+                        <th scope="row"><%= i.id_rayon %></th>
+                        <td><%= i.products_id %></td>
+                        <td><%= i.product_name %></td>
+                        <td><%= i.quantity %></td>
+                        <td><%= i.unit_price %></td>
+                        <td><%= i.id_f %></td>
+                        <td><a class="edit" href="/edit_pdt?id=<%= i.products_id %>&name=<%= i.product_name %>">Edit</a></td>
+                        <td><a class="delete" href="/delete?id=<%= i.products_id %>">Delete</a></td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+
+            </tr>
+        </thead>
+    </table>
+    <center>
+        <a href="add_pdt" ><button type="button" class="btn btn-primary btn-lg" style="background-color: #2487a5 !important;">Ajouter un produit</button></a>
+    </center>
+</body>
+</html>

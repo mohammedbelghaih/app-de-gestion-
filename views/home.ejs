@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Home</title>
+    <style>
+        body{
+            
+/* background: rgb(90,0,168);
+background: linear-gradient(90deg, rgba(90,0,168,1) 0%, rgba(137,1,154,1) 47%, rgba(153,0,119,1) 94%); */
+background: rgb(13,104,124);
+background: linear-gradient(90deg, rgba(13,104,124,1) 0%, rgba(21,118,184,1) 55%, rgba(36,33,144,1) 98%);
+        }
+    </style>
+</head>
+<body>
+    <%- include("./navbar/nav.ejs") %>
+    
+    <section class="section1">
+        <div class="wrap">
+        <div class="form-group add">
+            <a href="add" ><button type="button" class="btn btn-primary btn-lg" style="width: 100%; background-color:#2487a5;">Ajouter un rayon</button></a>
+        </div>
+        <div class="form-group add" >
+            <a href="add_fsseur" ><button type="button" class="btn btn-primary btn-lg" style="width: 100%; background-color:#2487a5;">Ajouter un fournisseur</button></a>
+        </div>
+        <div class="form-group add" >
+            <a href="add_pdt" ><button type="button" class="btn btn-primary btn-lg" style="width: 100%; background-color:#2487a5;">Ajouter un produit</button></a>
+        </div>
+    </div>  
+    </section>
+    
+</body>
+</html>

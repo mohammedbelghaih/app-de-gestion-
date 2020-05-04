@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Fournisseur</title>
+</head>
+
+<body>
+  <%- include("./navbar/nav.ejs") %>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">fournisseur</th>
+                <th scope="col">tel</th>
+                <th scope="col">email</th>
+                <th scope="col" style="width: 10%;">Modifier</th>
+                <th scope="col" style="width: 10%;">Supprimer</th>
+                <tbody>
+                    <% table.forEach((i)=>{ %>
+                    <tr>
+                        <td><%= i.name %></td>
+                        <td><%= i.tel %></td>
+                        <td><%= i.email %></td>
+                        <td><a class="edit" href="/edit_fsseur?id=<%= i.id %>&name=<%= i.name %>">Edit</a></td>
+                        <td><a class="delete" href="/delete_F?id=<%= i.id %>">Delete</a></td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </tr>
+        </thead>
+    </table>
+    <center>
+        <a href="add_fsseur" ><button type="button" class="btn btn-primary btn-lg" style="background-color: #2487a5 !important;">Ajouter un fournisseur</button></a>
+    </center>
+</body>
+</html>
